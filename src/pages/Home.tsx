@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Shield, Compass, BadgeCheck, Route } from 'lucide-react'
+import { Shield, Compass, BadgeCheck, Route, MapPin } from 'lucide-react'
 import { Hero } from '../components/Hero'
 import { StatsStrip } from '../components/StatsStrip'
 import { SectionHeading } from '../components/SectionHeading'
@@ -46,12 +46,7 @@ const features = [
   },
 ]
 
-const connectivitySpotlight = properties.map((property) => ({
-  id: property.id,
-  city: property.city,
-  title: property.title,
-  connectivity: property.connectivity.slice(0, 3),
-}))
+const connectivitySpotlight: never[] = []
 
 export function Home() {
   return (
@@ -63,40 +58,10 @@ export function Home() {
       <section className="space-y-10">
         <SectionHeading
           eyebrow="Shirdi Project"
-          title="Sai Meadows Enclave, Shirdi"
+          title="Sai Vatika Shirdi"
           description="Our flagship plotted enclave near the Nagar-Manmad Highway with approvals, ready infrastructure, and temple-town connectivity."
         />
         <FeaturedProject property={properties[0]} />
-      </section>
-
-
-      <section className="space-y-10">
-        <SectionHeading
-          eyebrow="Connectivity"
-          title="Corridor snapshots at a glance"
-          description="Every plot is mapped against critical anchors like airports, highways, education and healthcare so you know the commute story before you invest."
-        />
-        <div className="grid gap-6 md:grid-cols-2">
-          {connectivitySpotlight.map((spot) => (
-            <div key={spot.id} className="rounded-2xl border border-border/60 bg-panel p-6 shadow-lg">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.4em] text-emerald">{spot.city}</p>
-                  <p className="text-lg font-semibold text-ivory">{spot.title}</p>
-                </div>
-                <Route className="h-8 w-8 text-gold" />
-              </div>
-              <div className="mt-4 space-y-3">
-                {spot.connectivity.map((point) => (
-                  <div key={point.name} className="flex items-center justify-between rounded-2xl border border-border/60 px-4 py-2 text-sm">
-                    <div className="text-ivory">{point.name}</div>
-                    <span className="text-xs font-semibold text-emerald">{point.distance}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
       </section>
 
       <section className="space-y-10">
@@ -136,7 +101,7 @@ export function Home() {
         </div>
       </section>
 
-      <CTASection />
+      {/* Removed duplicate CTA section for a leaner home page */}
     </div>
   )
 }

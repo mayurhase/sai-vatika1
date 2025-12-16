@@ -1,4 +1,4 @@
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/mishragagan85@gmail.com'
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/saivatika4@gmail.com'
 
 export async function submitLead(payload: Record<string, string>) {
   const formData = new FormData()

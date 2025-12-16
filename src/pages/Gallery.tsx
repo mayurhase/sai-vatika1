@@ -1,6 +1,6 @@
+import { useState } from 'react'
 import { SectionHeading } from '../components/SectionHeading'
 import { properties } from '../data/properties'
-import { useState } from 'react'
 
 export function Gallery() {
   const project = properties[0]
@@ -20,7 +20,12 @@ export function Gallery() {
             onClick={() => setLightboxSrc(src)}
             className="group overflow-hidden rounded-2xl border border-border/60 bg-panel shadow-[0_20px_60px_rgba(0,0,0,0.06)] transition hover:scale-[1.01]"
           >
-            <img src={src} alt="Project gallery" className="h-56 w-full object-cover transition group-hover:scale-[1.04]" loading="lazy" />
+            <img
+              src={src}
+              alt="Project gallery"
+              className="h-56 w-full object-cover transition group-hover:scale-[1.04]"
+              loading="lazy"
+            />
           </button>
         ))}
       </div>

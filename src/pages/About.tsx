@@ -30,25 +30,21 @@ const directors = [
     name: 'Prasad Mate (Kaka)',
     title: 'Director',
     email: 'prasadmate1313@gmail.com',
-    photo: 'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=400&q=80',
   },
   {
     name: 'Kailas Katore',
     title: 'Director',
     email: 'kailaskatore82@gmail.com',
-    photo: 'https://images.unsplash.com/photo-1520340356584-8f852d41617a?auto=format&fit=crop&w=400&q=80',
   },
   {
     name: 'Vishwanath Shetty',
     title: 'Director',
     email: 'hotelshettysswasthik@gmail.com',
-    photo: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80',
   },
   {
     name: 'Sopan Bhadange',
     title: 'Director',
     email: 'sopanbhadange54@gmail.com',
-    photo: 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80',
   },
 ]
 
@@ -64,6 +60,15 @@ const businessSummary =
   'Sai Vatika is a residential/farmhouse plotting project near the Nagar–Manmad Highway. Planned plots, internal roads, essential utilities, and clear documentation make it a reliable, organized land-buying experience suitable for both home-building and long-term appreciation.'
 
 export function About() {
+  const initialsFor = (fullName: string) =>
+    fullName
+      .split(' ')
+      .filter(Boolean)
+      .map((part) => part[0])
+      .join('')
+      .slice(0, 2)
+      .toUpperCase()
+
   return (
     <div className="space-y-16">
       <section className="space-y-10">
@@ -118,12 +123,9 @@ export function About() {
         <div className="grid gap-6 md:grid-cols-4">
           {directors.map((member) => (
             <div key={member.name} className="rounded-2xl border border-border/60 bg-panel p-6 text-center shadow-lg">
-              <img
-                src={member.photo}
-                alt={member.name}
-                className="mx-auto h-20 w-20 rounded-full object-cover"
-                loading="lazy"
-              />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-chip text-lg font-semibold text-ink">
+                {initialsFor(member.name)}
+              </div>
               <p className="mt-4 text-lg font-semibold text-ivory">{member.name}</p>
               <p className="text-sm text-slate">{member.title}</p>
               <p className="mt-2 text-xs text-slate">{member.email}</p>

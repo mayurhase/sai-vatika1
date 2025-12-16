@@ -4,13 +4,15 @@ import { properties } from '../data/properties'
 import { FeaturedProject } from '../components/FeaturedProject'
 import { ContactForm } from '../components/ContactForm'
 
+const videoEmbeds = [
+  'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  'https://www.youtube.com/embed/5NV6Rdv1a3I',
+]
 
 export function Home() {
   return (
     <div className="space-y-24">
       <Hero />
-
-      
 
       <section className="space-y-10">
         <SectionHeading eyebrow="Shirdi Project" title="Sai Vatika Shirdi" />
@@ -24,7 +26,7 @@ export function Home() {
           description="Preview the site experience; full YouTube videos play inline."
         />
         <div className="grid gap-6 md:grid-cols-2">
-          {['https://www.youtube.com/embed/dQw4w9WgXcQ', 'https://www.youtube.com/embed/5NV6Rdv1a3I'].map((src) => (
+          {videoEmbeds.map((src) => (
             <div
               key={src}
               className="overflow-hidden rounded-2xl border border-border/60 bg-panel shadow-[0_20px_60px_rgba(0,0,0,0.06)]"

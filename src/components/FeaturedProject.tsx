@@ -234,26 +234,26 @@ export function FeaturedProject({
           <div className="space-y-1">
             <p className="text-xs uppercase tracking-[0.3em] text-emerald">Connectivity</p>
             <p className="text-sm text-slate">
-              Temple, airport, rail, and highways within minutes—commutes and weekend travel made effortless.
+              Temple, airport, rail, and highways within minutes - commutes and weekend travel made effortless.
             </p>
           </div>
           <Route className="h-6 w-6 flex-shrink-0 text-gold" />
         </div>
-          <div className="rounded-2xl border border-border/60 bg-panel p-4 shadow-sm">
-            <div className="divide-y divide-border/70 text-sm text-ivory">
-              {connectivity.map((point) => (
-                <motion.div
-                  key={point.name}
-                  variants={rowVariants}
-                  whileHover={{ scale: 1.01, backgroundColor: 'rgba(20,83,45,0.03)' }}
-                  className="flex items-center justify-between px-3 py-3"
-                >
-                  <span className="font-semibold text-ink">{point.name}</span>
-                  <span className="whitespace-nowrap text-xs text-slate">{point.distance}</span>
-                </motion.div>
-              ))}
-            </div>
+        <div className="rounded-2xl border border-border/60 bg-panel p-4 shadow-sm">
+          <div className="divide-y divide-border/70 text-sm text-ivory">
+            {connectivity.map((point) => (
+              <motion.div
+                key={point.name}
+                variants={rowVariants}
+                whileHover={{ scale: 1.01, backgroundColor: 'rgba(20,83,45,0.03)' }}
+                className="flex items-center justify-between px-3 py-3"
+              >
+                <span className="font-semibold text-ink">{point.name}</span>
+                <span className="whitespace-nowrap text-xs text-slate">{point.distance}</span>
+              </motion.div>
+            ))}
           </div>
+        </div>
       </motion.div>
     </motion.section>
   )

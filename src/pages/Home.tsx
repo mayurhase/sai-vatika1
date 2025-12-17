@@ -7,7 +7,7 @@ import { ContactForm } from '../components/ContactForm'
 const videoEmbeds = [
   'https://www.youtube.com/embed/asdviMzCXOo',
   'https://www.youtube.com/embed/KCSATrolYgE',
-  'https://www.youtube.com/embed/KCSATrolYgE',
+  'https://www.youtube.com/embed/0Ni4rKI915c',
 ]
 
 export function Home() {

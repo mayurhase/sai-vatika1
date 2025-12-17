@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Globe, Instagram, Facebook, Linkedin, Youtube } from 'lucide-react'
+import { Mail, MapPin, Phone, Instagram, Facebook, Linkedin, Youtube } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export function Footer() {
@@ -79,14 +79,6 @@ export function Footer() {
               className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-2 hover:border-gold/80 hover:text-gold"
             >
               <Linkedin className="h-4 w-4" /> LinkedIn
-            </a>
-            <a
-              href="https://www.saivatika4.in"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-2 hover:border-gold/80 hover:text-gold"
-            >
-              <Globe className="h-4 w-4" /> Website
             </a>
           </div>
         </div>

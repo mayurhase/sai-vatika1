@@ -18,7 +18,7 @@ export function ContactForm() {
       className="space-y-5 rounded-3xl border border-border/60 bg-panel p-8 text-slate shadow-[0_24px_80px_rgba(0,0,0,0.06)]"
     >
       <div className="grid gap-5 sm:grid-cols-2">
-        <div className="space-y-2">
+        <div className="space-y-2 sm:col-span-2">
           <label className="text-xs uppercase tracking-[0.3em] text-slate" htmlFor="name">
             Name
           </label>
@@ -29,19 +29,6 @@ export function ContactForm() {
             required
             className="w-full rounded-xl border border-border bg-night/80 px-4 py-3 text-sm text-ivory outline-none ring-1 ring-transparent focus:ring-ink/50"
           />
-        </div>
-        <div className="space-y-2">
-          <label className="text-xs uppercase tracking-[0.3em] text-slate" htmlFor="email">
-            Email
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            className="w-full rounded-xl border border-border bg-night/80 px-4 py-3 text-sm text-ivory outline-none ring-1 ring-transparent focus:ring-ink/50"
-          />
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
       </div>
       <div className="space-y-2">
@@ -57,16 +44,16 @@ export function ContactForm() {
         />
       </div>
       <div className="space-y-2">
-        <label className="text-xs uppercase tracking-[0.3em] text-slate" htmlFor="message">
-          Message
+        <label className="text-xs uppercase tracking-[0.3em] text-slate" htmlFor="email">
+          Email (optional)
         </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={3}
+        <input
+          id="email"
+          name="email"
+          type="email"
           className="w-full rounded-xl border border-border bg-night/80 px-4 py-3 text-sm text-ivory outline-none ring-1 ring-transparent focus:ring-ink/50"
         />
-        <ValidationError prefix="Message" field="message" errors={state.errors} />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
       </div>
       <input type="hidden" name="_subject" value="Sai Vatika website enquiry" />
       <button

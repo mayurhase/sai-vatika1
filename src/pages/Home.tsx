@@ -5,8 +5,9 @@ import { FeaturedProject } from '../components/FeaturedProject'
 import { ContactForm } from '../components/ContactForm'
 
 const videoEmbeds = [
-  'https://www.youtube.com/embed/dQw4w9WgXcQ',
-  'https://www.youtube.com/embed/5NV6Rdv1a3I',
+  'https://www.youtube.com/embed/asdviMzCXOo',
+  'https://www.youtube.com/embed/KCSATrolYgE',
+  'https://www.youtube.com/embed/KCSATrolYgE',
 ]
 
 export function Home() {
@@ -25,7 +26,7 @@ export function Home() {
           title="Project walkthroughs"
           description="Preview the site experience; full YouTube videos play inline."
         />
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-3">
           {videoEmbeds.map((src) => (
             <div
               key={src}
